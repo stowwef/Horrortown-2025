@@ -1,3 +1,12 @@
+:root{
+
+    --Color-Primario: red;
+    --Color-Secundario: blue;
+    --Color-Terciario: yellow;
+    --Color-Fondo: black;
+    --Tiempo-Transicion-Promedio: 0.5s;
+    --Tiempo-Animacion-Promedio: 1s; 
+}
 *{
     margin: 0;
     padding: 0;
