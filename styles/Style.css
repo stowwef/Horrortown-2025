@@ -1,3 +1,4 @@
+/*Variables con la gama de colores, tiempos de las animaciones y transiciones*/
 :root{
 
     --Color-Primario: red;
@@ -7,11 +8,13 @@
     --Tiempo-Transicion-Promedio: 0.5s;
     --Tiempo-Animacion-Promedio: 1s; 
 }
+/*Reinicio de la pagina*/
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+/*Estilos base de la pagina*/
 body{
     background-color: black;
 }
