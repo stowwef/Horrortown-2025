@@ -1,27 +1,34 @@
+
 /*Variables con la gama de colores, tiempos de las animaciones y transiciones*/
+
 :root{
 
     --Color-Contenedores: #990100;
     --Color-Letras: #B90504;
     --Color-Fondo: black;
+    --Color-titulo: white;
     --Tiempo-Transicion-Promedio: 0.5s;
     --Tiempo-Animacion-Promedio: 1s; 
 }
+
 /*Reinicio de la pagina*/
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family:Arial, Helvetica, sans-serif;
 }
+
 /*Estilos base de la pagina para ajustar todos los valores de las diferentes etiquetas de manera general*/
+
 body{
     background-color: var(--Color-Fondo);
     color: var(--Color-Letras);
 }
 a{
     text-decoration: none;
-    color: white;
+    color: var(--Color-titulo);
 }
 ol,ul{
     list-style: none;
@@ -36,11 +43,12 @@ li{
 
     width: 100%;
     height: 20vh;
-    background-color: var(--Color-Contenedores);
+    background-color: var(--Color-Fondo);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 30px;
+    margin-bottom: 10px;
     
 }
 .Navbar{
@@ -56,7 +64,108 @@ li{
     align-items: center;
     justify-content: flex-end;
 }
-img{
-    width: 300px;
+.logo{
+    width: 350px;
     height: 100px;
+}
+
+/*Contenido principal, secciones de la pagina principal*/
+
+/*Seccion 1*/
+.section-1{
+    width: 100%;
+    padding: 5px;
+    margin-top: 100px;
+}
+.subtitulo{
+
+    color: var(--Color-titulo);
+    font-size: 25px;
+}
+.subtitulo::after{
+    content: " ⟵";
+    color: var(--Color-Letras);
+}
+.subtitulo::before{
+    content: "⟶ ";
+    color: var(--Color-Letras);
+}
+.parrafo{
+
+    text-align: justify;
+}
+.parrafo::before{
+    content: "⟶ ";
+    color: var(--Color-Fondo);
+}
+.imagen{
+    width: 400px;
+    height: 270px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Seccion 2*/
+.section-2{
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 100px;
+}
+.video{
+
+    width: 450px;
+    height: 300px;
+}
+
+/*Seccion 3*/
+.section-3{
+
+    margin-top: 100px;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 100px
+}
+
+/*Seccion 4*/
+.section-4{
+   
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+/*Footer de la pagina*/
+.Pie{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 160px;
+    padding: 10px;
+}
+.labels{
+    color: var(--Color-titulo);
+    font-weight: 900;
+    font-size: 20px;
+}
+.campo{
+    background-color: var(--Color-Contenedores);
+    border: none;
+    height: 30px;
+    padding: 2px 4px;
+    border-radius: 5px;
+}
+.button{
+    width: 100px;
+    height: 30px;
+    margin-top: 10px;
+    background-color: var(--Color-Contenedores);
+    border: none;
+    border-radius: 5px;
+
 }
