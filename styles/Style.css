@@ -82,21 +82,9 @@ li{
     color: var(--Color-titulo);
     font-size: 25px;
 }
-.subtitulo::after{
-    content: " ⟵";
-    color: var(--Color-Letras);
-}
-.subtitulo::before{
-    content: "⟶ ";
-    color: var(--Color-Letras);
-}
 .parrafo{
 
     text-align: justify;
-}
-.parrafo::before{
-    content: "⟶ ";
-    color: var(--Color-Fondo);
 }
 .imagen{
     width: 400px;
@@ -143,29 +131,61 @@ li{
 .Pie{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
-    height: 160px;
+    height: 150px;
     padding: 10px;
+}
+.contenedor-form{
+
+    width: 100%;
+    height: 40px;
+    position: relative;
+}
+.subtituloform{
+
+    font-size: 25px;
 }
 .labels{
     color: var(--Color-titulo);
-    font-weight: 900;
-    font-size: 20px;
+    font-size: 16px;
 }
 .campo{
+
     background-color: var(--Color-Contenedores);
-    border: none;
     height: 30px;
     padding: 2px 4px;
     border-radius: 5px;
+    border: none;
+    outline: none;
 }
 .button{
     width: 100px;
     height: 30px;
-    margin-top: 10px;
     background-color: var(--Color-Contenedores);
     border: none;
     border-radius: 5px;
 
 }
+
+/*Pseudo clases y pseudo elementos*/
+.parrafo::before{
+    content: "⟶ ";
+    color: var(--Color-Fondo);
+}
+.subtitulo::after{
+    content: " ⟵";
+    color: var(--Color-Letras);
+}
+.subtitulo::before{
+    content: "⟶ ";
+    color: var(--Color-Letras);
+}
+.campo::placeholder{
+    color: black;
+}
+
+
+/*Efecto del campo y ultimos detalles de la pagina inicial de Horrortown-2005*/
+
+
