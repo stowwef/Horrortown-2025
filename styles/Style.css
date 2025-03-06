@@ -34,7 +34,7 @@ ol,ul{
     list-style: none;
 }
 li{
-    margin-left: 7px;
+    margin-left: 15px;
 }
 
 /*Header de la pagina, organización del header, barra de navegación y apartados*/
@@ -47,12 +47,13 @@ li{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     padding: 30px;
     margin-bottom: 10px;
     
 }
 .Navbar{
-    width: 50%;
+    width: 70%;
     height: 100%;
 }
 .listas-apartados{
@@ -60,7 +61,7 @@ li{
     width: 100%;
     height: 100%;
     display: flex;
-    font-size: 12px;
+    font-size: 20px;
     align-items: center;
     justify-content: flex-end;
 }
@@ -73,9 +74,10 @@ li{
 
 .linea-Neon{
 
-    width: 100%;
+    width: 0%;
     height: 3px;
-    background-color: #990100;
+    background: linear-gradient(90deg, #b90504, #ae0000, #990100, #870000, #6c0000);
+    animation: Neon 0.5s ease infinite, BarraCarga 3s forwards 1s;
 }
 /*Seccion 1*/
 .section-1{
@@ -139,18 +141,28 @@ li{
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    height: 250px;
+    height: 170px;
     padding: 10px;
 }
 .contenedor-form{
 
     width: 100%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 .Contenedor-Campo-1{
-    width: 100%;
+    width: 26%;
+    margin-left: 2px;
+    position: relative;
+}
+.Contenedor-Campo-2{
+    width: 26%;
+    height: 40px;
+    margin-left: 2px;
+    display: flex;
+    align-items: center;
+    position: relative;
+
 }
 .subtituloform{
 
@@ -178,7 +190,7 @@ li{
 
 }
 
-/*Pseudo clases y pseudo elementos*/
+/*Pseudo clases y pseudo elementos de la pagina oficial*/
 .parrafo::before{
     content: "⟶ ";
     color: var(--Color-Fondo);
@@ -196,7 +208,79 @@ li{
 }
 
 
-/*Efecto del campo y ultimos detalles de la pagina inicial de Horrortown-2005*/
+/*Efecto del campo, lineas neon y ultimos detalles de la pagina inicial de la pagina horrortown-2025*/
+
+/*Lineas neon y barra de carga (Extra)*/
+@keyframes Neon{
+    0%{
+        background: linear-gradient(90deg, #b90504, #ae0000, #990100, #870000, #6c0000);
+    }
+    25%{
+        background: linear-gradient(90deg,  #ae0000, #990100, #870000, #6c0000,#b90504);
+    }
+    50%{
+
+        background: linear-gradient(90deg,  #990100, #870000, #6c0000, #b90504, #ae0000);
+    }
+    75%{
+        background: linear-gradient(90deg,  #870000, #6c0000, #b90504, #ae0000,#990100);
+    }
+    100%{
+        background: linear-gradient(90deg, #6c0000, #b90504, #ae0000, #990100, #870000);
+    }
+}
+@keyframes BarraCarga{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
+}
+
+/*Efectos de los campos de texto*/
+.Contenedor-Campo-1::after{
+
+    content: " ";
+    background-color: white;
+    width: 0%;
+    height: 3px;
+    margin-bottom: 1px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-radius: 4px;
+    transition: width 1s ease;
+}
+.Contenedor-Campo-2::after{
+
+    content: " ";
+    background-color: white;
+    width: 0%;
+    height: 3px;
+    margin-bottom: 5px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-radius: 4px;
+    transition: width 1s ease;
 
 
+}
+.Contenedor-Campo-1:focus-within::after{
+    width: 176px;
+}
+.Contenedor-Campo-2:focus-within::after{
+    width: 176px;
+}
 
+/* @media (max-width: 700px) {
+    .header{
+
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+} */
