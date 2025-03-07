@@ -302,7 +302,7 @@ i{
 
 /*Apartado del diseño responsivo de los diferentes apartados de la pagina de Horrortown 2025*/
 
- @media (max-width: 1300px) {
+ @media (max-width: 1023px) {
     .Encabezado{
 
         display: flex;
@@ -321,7 +321,7 @@ i{
     }
 
 }
-@media (min-width: 1301px){
+@media (min-width: 1024px){
     
     .Encabezado{
         display: flex;
