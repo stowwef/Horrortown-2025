@@ -36,6 +36,9 @@ ol,ul{
 li{
     margin-left: 15px;
 }
+i{
+    letter-spacing: -3px;
+}
 
 /*Header de la pagina, organización del header, barra de navegación y apartados*/
 
@@ -47,7 +50,6 @@ li{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
     padding: 30px;
     margin-bottom: 10px;
     
@@ -141,7 +143,7 @@ li{
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    height: 170px;
+    height: 210px;
     padding: 10px;
 }
 .contenedor-form{
@@ -187,6 +189,26 @@ li{
     background-color: var(--Color-Contenedores);
     border: none;
     border-radius: 5px;
+
+}
+.Contenedor-Redes{
+
+    display: flex;
+    margin-top: 10px;
+}
+.titulo-redes::after{
+
+    content: " ⟶";
+    color: white;
+
+}
+.Media-link{
+    color: var(--Color-Letras);
+    margin-left: 5px;
+}
+.derechos{
+
+    color: var(--Color-titulo);
 
 }
 
@@ -278,13 +300,16 @@ li{
     width: 176px;
 }
 
- @media (max-width: 1200px) {
+/*Apartado del diseño responsivo de los diferentes apartados de la pagina de Horrortown 2025*/
+
+ @media (max-width: 1300px) {
     .Encabezado{
 
         display: flex;
         justify-content: center;
         align-items: center;
         height: auto;
+        flex-direction: column;
     }
     .listas-apartados{
 
@@ -295,4 +320,11 @@ li{
         margin-top: 7px;
     }
 
+}
+@media (min-width: 1301px){
+    
+    .Encabezado{
+        display: flex;
+        flex-direction: row;
+    }
 }
